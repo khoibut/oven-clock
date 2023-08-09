@@ -4,8 +4,8 @@ body{
 #Oven{
     height:50%;
     width:50%;
-    position:relative;
-    margin-top:10%;
+    position:absolute;
+    top:20%;
     left:10%;  
 }
 #Plate{
