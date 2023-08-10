@@ -1,38 +1,49 @@
 body{
-    background-image: url("Images/background.png");
+    background-image: url("Images/Grass.png");
+}
+#Title{
+    display: block;
+    margin: 0 auto;
+}
+#Timer{
+    background-image: url("Images/BluePicnic.png");
+    text-align: center;
+    margin-left:15%;
+    margin-right:15%;
+    padding:5%;
 }
 #Oven{
-    height:50%;
-    width:50%;
-    position:absolute;
-    top:20%;
-    left:10%;  
+    width:80%;
+    margin-top: 10%;
 }
 #Plate{
-    height:20%;
-    width:30%;
-    top:75%;
-    right:52%;
-    position:absolute;
+    margin-top:2%;
+    width:60%;
+}
+#Todolist{
+    background-image: url("Images/RedPicnic.png");
+    margin-top: 10%;
+    margin-left:15%;
+    margin-right:15%;
+    padding:5%;
+}
+#Basket{
+    margin-top:10%;
+    margin-right: 100%;
+    max-width: 50%;
 }
 #Apple{
-    width:10%;
-    height:auto;
-    position:absolute;
-    top:75%;
-    right:2%;
+    width:15%;
 }
-#Menu{
-    width:25%;
-    height:auto;
-    position:absolute;
-    top: 2%;
-    right: 2%;
+#Redbox{
+    width:80%;
+    margin-left: 3%;
 }
-#Seasoning{
-    top:0px;
-    left:0px;
-    width:7%;
-    height:auto;
-    position:absolute
+#list{
+    margin-top:2%;
+    padding:5%;
+    font-size: 200%;
+    margin-left:18%;
+    background-image: url("Images/Paper.png");
+    min-height: 500px;
 }
