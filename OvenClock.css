@@ -20,30 +20,58 @@ body{
     margin-top:2%;
     width:60%;
 }
+#Basket{
+    margin-top:10%;
+    margin-right: 100%;
+    width: 20%;
+}
 #Todolist{
     background-image: url("Images/RedPicnic.png");
     margin-top: 10%;
     margin-left:15%;
     margin-right:15%;
     padding:5%;
-}
-#Basket{
-    margin-top:10%;
-    margin-right: 100%;
-    max-width: 50%;
+    position:relative;
 }
 #Apple{
-    width:15%;
+    transition: transform .2s;
+    width:10%;
+    position:absolute;
+    top:0;
 }
-#Redbox{
-    width:80%;
-    margin-left: 3%;
+
+#Task{
+    box-sizing: border-box;
+    background-color: rgb(255, 162, 134);
+    outline:none;
+    border-radius: 20px;
+    border:solid 10px orangered;
+    margin-left:18%;
+    width:81%;
+    height:200%;
+    padding:4%;
+    font-size: 200%;
+    margin-top: -40%;
 }
 #list{
-    margin-top:2%;
+    box-sizing: border-box;
     padding:5%;
+    word-wrap: break-word;
+    padding-right: 100px;
+    margin-top:2%;
     font-size: 200%;
     margin-left:18%;
     background-image: url("Images/Paper.png");
     min-height: 500px;
+}
+li{
+    width:100%;
+    margin-bottom: 30px;
+    position:relative;
+}
+.Trash{
+    width:7%;
+    position:absolute;
+    right:0;
+    margin-right:-70px;
 }
