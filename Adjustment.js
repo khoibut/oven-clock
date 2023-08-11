@@ -1,0 +1,52 @@
+function Remove(e){
+    console.log(e)
+}
+function Add(){
+    Task=document.getElementById("Task").value;
+    if (Task.length>0){
+        document.getElementById("Task").value='';
+        ul=document.getElementById("TaskList");
+        li=document.createElement("li");
+        li.appendChild(document.createTextNode(Task));
+        li.setAttribute("draggable","true");
+        li.setAttribute("class","draggable");
+        Trash=document.createElement("img");
+        Trash.setAttribute("src","Images/Trash.png");
+        Trash.setAttribute("class","Trash");
+        Trash.setAttribute("draggable","false");
+        li.appendChild(Trash);
+        ul.appendChild(li);
+        Trash.addEventListener("click",function(){
+            this.parentElement.remove();
+        })
+        li.addEventListener('dragstart',function(){
+            this.classList.add("dragging");
+        })
+        li.addEventListener("dragend",function(){
+            this.classList.remove("dragging");
+        })
+        ul.addEventListener("dragover",function(e){
+            e.preventDefault();
+            dragging=document.querySelector(".dragging");
+            draggableElements=[...ul.querySelectorAll(".draggable:not(.dragging)")]
+            y=e.clientY;
+            distance=Number.NEGATIVE_INFINITY;
+            child=null;
+            for(i=0;i<draggableElements.length;i++){
+                box=draggableElements[i].getBoundingClientRect();
+                offset=y-box.top-box.height/2;
+                if(offset>distance && offset<0){
+                    distance=offset;
+                    child=draggableElements[i];
+                }
+            }
+            if(child==null){
+                ul.appendChild(dragging);
+            }else{
+                ul.insertBefore(dragging,child);
+            }
+        })
+    }
+}
+document.getElementById("Apple").addEventListener("click",Add);
+TaskList=document.getElementById("TaskList");

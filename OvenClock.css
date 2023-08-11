@@ -39,7 +39,9 @@ body{
     position:absolute;
     top:0;
 }
-
+#Apple:hover{
+    transform: scale(1.5);
+}
 #Task{
     box-sizing: border-box;
     background-color: rgb(255, 162, 134);
@@ -50,6 +52,7 @@ body{
     width:81%;
     height:200%;
     padding:4%;
+    font-family: cursive;
     font-size: 200%;
     margin-top: -40%;
 }
@@ -65,13 +68,22 @@ body{
     min-height: 500px;
 }
 li{
+    font-family:cursive;
     width:100%;
     margin-bottom: 30px;
     position:relative;
 }
+.draggable.dragging{
+    color: red;
+    opacity: 0.5;
+}
 .Trash{
+    transition: transform .2s;
     width:7%;
     position:absolute;
     right:0;
     margin-right:-70px;
+}
+.Trash:hover{
+    transform: scale(1.5);
 }
