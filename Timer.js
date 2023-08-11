@@ -1,6 +1,6 @@
-time=610
+time=5
 Oven=document.getElementById("OvenTimer");
-setInterval(() => {
+Oventime=setInterval(() => {
     minute=(time-time%60)/60;
     minute=minute.toString();
     if(minute.length<2){
@@ -10,6 +10,9 @@ setInterval(() => {
     second=second.toString();
     if(second.length<2){
         second="0"+second;
+    }
+    if(minute=="00" && second=="00"){
+        clearInterval(Oventime)
     }
     currenttime=document.createTextNode(minute+":"+second)
     if(document.getElementById("OvenTime")!=null){
