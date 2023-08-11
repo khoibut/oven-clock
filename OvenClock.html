@@ -1,28 +1,37 @@
 <!DOCTYPE html>
-<html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Oven Clock</title>
-    <link href="OvenClock.css" rel="stylesheet"/>
-    <script src="Adjustment.js" defer></script>
-    <script src="Timer.js" defer></script>
-</head>
-<body>
-    <img id="Title" src="Images/Title.png">
-    <div id="Timer">
-        <div id="OvenTimer">
-            <img id="Oven" src="Images/Oven.png"/>
-        </div>
-        <img id="Plate" src="Images/Plate.png"/><br>
-        <img id="Basket" src="Images/Basket.png">
-    </div>
-    <div id="Todolist">
-        <img id="Apple" src="Images/Apple.png" draggable="false"><input id="Task"><br>
-        <div id="list">
-            <ul id="TaskList">
-            </ul>
-        </div>
-    </div>
-</body>
-</html>
+    <html lang="en">
+        <head>
+            <meta charset="UTF-8">
+            <meta name="viewport" content="width=device-width, initial-scale=1.0">
+            <title>Oven Clock</title>
+            <link href="OvenClock.css" rel="stylesheet"/>
+            <script src="Adjustment.js" defer></script>
+            <script src="Timer.js" defer></script>
+            <script src="Startbtn.js" defer></script>
+        </head>
+        <body>
+            <img id="Title" src="Images/Title.png">
+
+            <div id="Timer">
+                <div id="OvenTimer">
+                    <img id="Oven" src="Images/Oven.png"/>
+<!-- Start and Pause Buttons -->
+                    <button class="StartPause" onclick="sound.play(), Active()">START</button>
+                    <audio id="Click">
+                        <source src="Audio/Button.mp3">
+                    </audio>
+                </div>
+                <img id="Plate" src="Images/Plate.png"/><br>
+                <img id="Basket" src="Images/Basket.png">
+            </div>
+
+            <div id="Todolist">
+                <img id="Apple" src="Images/Apple.png" draggable="false"><input id="Task"><br>
+                <div id="list">
+                    <ul id="TaskList">
+                    </ul>
+                </div>
+            </div>
+
+        </body>
+    </html>
