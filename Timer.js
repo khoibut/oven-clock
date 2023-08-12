@@ -9,6 +9,8 @@ function Active(){
             Oventime=setInterval(() => {
                 if(time<=0){
                     new Audio("Audio/Ding.mp3").play();
+                    active.classList.remove('active');
+                    active.innerHTML = "START";
                     clearInterval(Oventime)
                 }
                 minute=(time-time%60)/60;
