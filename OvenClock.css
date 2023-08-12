@@ -21,6 +21,7 @@ body{
     font-size: 400%;
     top:57%;
     left:33%;
+    font-family:'Courier New', Courier, monospace;
 }
 #Oven{
     width:80%;
@@ -56,10 +57,24 @@ body{
     border-radius: 8px;
 }
 
-#Plate{
-    margin-top:2%;
-    width:60%;
+/* Session time */
+.Session{
+    position: relative;
 }
+#Plate{
+    margin-top:10%;
+    width: 60%;
+}
+#Session{
+    position: absolute;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: Bold;
+    font-size: 400%;
+    color: #3D426B;
+    left: 33%;
+    bottom: 23%;
+}
+
 #Basket{
     margin-top:10%;
     margin-right: 100%;
