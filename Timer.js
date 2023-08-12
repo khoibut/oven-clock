@@ -11,7 +11,13 @@ function currentTime(time){
     }
     return(minute+":"+second);
 }
-time=5
+currentbreak=false;
+cycle=0
+longbreak=4;
+worktime=10
+shortbreaktime=5
+longbreaktime=7
+time=worktime
 oven=document.getElementById("OvenTime");
 oven.innerHTML=currentTime(time);
 let active = document.querySelector('.StartPause');
@@ -26,9 +32,25 @@ function Active(){
                     time--;
                     oven.innerHTML=currentTime(time)
                 }
-                if(time<=0){
+                if(time==0){
+                    if (currentbreak==false){
+                        cycle++
+                        currentbreak=true;
+                        oven.style.color="aqua";
+                        if(cycle==longbreak){
+                            time=longbreaktime;
+                            cycle=0;
+                        }else{
+                            time=shortbreaktime;
+                        }
+                    }else{
+                        currentbreak=false;
+                        oven.style.color="orange";
+                        time=worktime;
+                    }
                     new Audio("Audio/Ding.mp3").play();
                     active.classList.remove('active');
+                    oven.innerHTML=currentTime(time);
                     active.innerHTML = "START";
                     clearInterval(Oventime)
                 }
