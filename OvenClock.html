@@ -15,7 +15,7 @@
                 <div id="OvenTimer">
                     <img id="Oven" src="Images/Oven.png"/>
 <!-- Start and Pause Buttons -->
-                    <button class="StartPause" onclick="sound.play(), Active()">START</button>
+                    <button class="StartPause" onclick="sound.cloneNode(true).play(), Active()">START</button>
                     <audio id="Click">
                         <source src="Audio/Button.mp3">
                     </audio>
