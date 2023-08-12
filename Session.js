@@ -4,11 +4,11 @@ Sextime = 0;
 
 function Turnon(){
     if (activenow.classList.contains('active')){
-        if(time>0){
+        if(time>0 && currentbreak==false){
             SessionTime = setInterval(() => {
                 Sextime++
                 var oventime = document.getElementById('OvenTime');
-                if (time==0){
+                if (currentbreak==true){
                     clearInterval(SessionTime);
                 }
     
