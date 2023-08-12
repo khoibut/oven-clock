@@ -20,7 +20,7 @@ body{
     color:orange;
     font-size: 400%;
     top:57%;
-    left:33%;
+    left:30%;
     font-family:'Courier New', Courier, monospace;
 }
 #Oven{
@@ -62,7 +62,7 @@ body{
     position: relative;
 }
 #Plate{
-    margin-top:10%;
+    margin-top:2%;
     width: 60%;
 }
 #Session{
@@ -71,8 +71,8 @@ body{
     font-weight: Bold;
     font-size: 400%;
     color: #3D426B;
-    left: 33%;
-    bottom: 23%;
+    left: 30%;
+    bottom: 30%;
 }
 
 #Basket{
