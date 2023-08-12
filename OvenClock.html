@@ -7,7 +7,6 @@
             <link href="OvenClock.css" rel="stylesheet"/>
             <script src="Adjustment.js" defer></script>
             <script src="Timer.js" defer></script>
-            <script src="Startbtn.js" defer></script>
             <script src="Session.js" defer></script>
         </head>
         <body>
@@ -16,12 +15,14 @@
             <div id="Timer">
                 <div id="OvenTimer">
                     <img id="Oven" src="Images/Oven.png"/>
+                  
 <!-- Start and Pause Buttons -->
-                    <button class="StartPause" onclick="sound.play(), Active(), Turnon()">START</button>
+                    <button class="StartPause" onclick="sound.cloneNode(true).play(), Active(), Turnon()">START</button>
                     <audio id="Click">
                         <source src="Audio/Button.mp3">
                     </audio>
                 </div>
+              
 <!-- Seission time -->
                 <div class="Session">
                     <img id="Plate" src="Images/Plate.png"/>
