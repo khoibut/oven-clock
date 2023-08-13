@@ -28,13 +28,17 @@ function Active(){
         active.innerHTML = "PAUSE";
         if(time>0){
             Oventime=setInterval(() => {
+                todolist=document.getElementById("TaskList")
+                task=document.getElementsByClassName("draggable")
                 if(time>0){
                     time--;
                     oven.innerHTML=currentTime(time)
                 }
                 if(time==0){
                     if (currentbreak==false){
+                        percent=120;
                         cycle++
+                        todolist.removeChild(task[0])
                         currentbreak=true;
                         oven.style.color="aqua";
                         if(cycle==longbreak){
@@ -44,6 +48,7 @@ function Active(){
                             time=shortbreaktime;
                         }
                     }else{
+                        percent=120;
                         currentbreak=false;
                         oven.style.color="orange";
                         time=worktime;
