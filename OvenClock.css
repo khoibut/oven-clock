@@ -123,6 +123,7 @@ body{
     opacity: 0;
     cursor: pointer;
     top: 27%;
+    display:none;
 }
 @keyframes hovering {
     from{

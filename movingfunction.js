@@ -7,6 +7,9 @@ let clicked=false;
 document.getElementById("Basket").addEventListener("click", () => {
     {
         if(clicked==false){
+            gear.style.display="inline";
+            save.style.display="inline";
+            load.style.display="inline";
             clicked=true;
             if(!moved){
                 document.getElementById("Basket").style.marginLeft = "-750px"
@@ -30,14 +33,16 @@ document.getElementById("Basket").addEventListener("click", () => {
                     save.style.opacity = opacity;
                     load.style.opacity = opacity;
                     if(opacity <= 0){
+                        gear.style.display="none";
+                        save.style.display="none";
+                        load.style.display="none";
                         clicked=false;
                         moved=false;
                         opacity=0;
                         document.getElementById("Basket").style.marginLeft = "0px";
                         clearInterval(disappear);
                     }
-                    console.log(opacity);
-                }, 5);
+                }, 10);
             }
         }
     }
