@@ -10,10 +10,12 @@
             <script src="Session.js" defer></script>
             <script src="Scrolling.js" defer></script>
             <script src="saveload.js" defer></script>
+            <script src="movingfunction.js" defer></script>
+            <script src="setting-window.js" defer></script>
         </head>
         <body>
             <img id="Title" src="Images/Title.png">
-
+            
             <div id="Timer">
                 <div id="OvenTimer">
                     <img id="Oven" src="Images/Oven.png"/>
@@ -36,14 +38,18 @@
                 <div id="Settings">
                     <img id="Basket" src="Images/Basket.png">
                         <div>
-                            <span id="saved">Saved!</span>
-                            <span id="loaded">Loaded!</span>
                             <img id="gear" src="Images/Gear.png">
-                            <img id="save" src="Images/Save.png">
-                            <img id="load" src="Images/Load.png">
+                            <div id="save-and-load">
+                                <span id="saved">Saved!</span>
+                                <span id="loaded">Loaded!</span>
+                                
+                                <img id="save" src="Images/Save.png">
+                                <img id="load" src="Images/Load.png">
+                            </div>
                         </div>
-                    <script src="movingfunction.js"></script>
-                </div>
+                        <!-- <img class="adjustment" src="https://th.bing.com/th/id/OIP.f0hIG5w8e0Xl0tA1XjecsgHaD-?pid=ImgDet&rs=1"> -->
+                        <div id="window"></div>
+                    </div>
 
               
             </div>

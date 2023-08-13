@@ -109,6 +109,7 @@ body{
     position: relative;
 }
 #Basket{
+
     margin-right: auto;
     margin-left: auto;
     width: 20%;
@@ -172,6 +173,27 @@ body{
     animation-timing-function: ease-in-out;
     animation-direction: alternate-reverse;
     animation-iteration-count: infinite;  
+}
+/* setting window */
+#window{
+    position: absolute;
+    background-color:rgb(245, 242, 251);
+    text-align: center;
+    top:0%;
+    left: 45%;
+    height: 27%;
+    width: 40%;
+    padding:10%;
+    border: 5px solid rgb(48, 49, 53);
+    border-radius: 20px;
+    opacity: 1;
+    display:none;
+}
+/* .adjustment{
+    opacity:1;
+} */
+#save-and-load{
+    opacity:1;
 }
 
 /* todolist */
