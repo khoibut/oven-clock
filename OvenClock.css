@@ -104,20 +104,20 @@ body{
 }
 #gear{
     position: absolute;
-    left: 580px;
-    top: 1060px;
+    left: 40%;
+    top: 133%;
     width: 8%;
 }
 #save{
     position: absolute;
-    left: 800px;
-    top: 1060px;
+    left: 55%;
+    top: 133%;
     width: 7%;
 }
 #load{
     position: absolute;
-    left: 1000px;
-    top: 1060px;
+    left: 68%;
+    top: 133%;
     width: 8%;
 }
 #gear, #save, #load{
