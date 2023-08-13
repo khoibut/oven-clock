@@ -80,6 +80,8 @@ body{
     margin-top:2%;
     width: 60%;
 }
+
+/* settings and stuffs */
 #Session{
     position: absolute;
     font-family:'Courier New', Courier, monospace;
@@ -92,9 +94,38 @@ body{
 
 #Basket{
     margin-top:10%;
-    margin-right: 100%;
+    margin-right: auto;
+    margin-left: auto;
     width: 20%;
+    cursor: pointer;
 }
+#Basket:hover{
+    transform: translateY(-10px);
+}
+#gear{
+    position: absolute;
+    left: 580px;
+    top: 1060px;
+    width: 8%;
+}
+#save{
+    position: absolute;
+    left: 800px;
+    top: 1060px;
+    width: 7%;
+}
+#load{
+    position: absolute;
+    left: 1000px;
+    top: 1060px;
+    width: 8%;
+}
+#gear, #save, #load{
+    opacity: 0;
+    cursor: pointer;
+}
+
+
 #Todolist{
     background-image: url("Images/RedPicnic.png");
     margin-top: 10%;
