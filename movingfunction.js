@@ -18,7 +18,6 @@ document.getElementById("Basket").addEventListener("click", () => {
                     gear.style.opacity = opacity;
                     save.style.opacity = opacity;
                     load.style.opacity = opacity;
-                    console.log(opacity);
                     if(opacity >= 1){
                         clicked=false;
                         moved=true;
