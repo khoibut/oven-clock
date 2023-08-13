@@ -9,7 +9,7 @@ document.getElementById("Basket").addEventListener("click", function movingfunct
         if(clicked==false){
             clicked=true;
             if(!moved){
-                document.getElementById("Basket").style.marginRight = "900px"
+                document.getElementById("Basket").style.marginLeft = "-750px"
                 appear=setInterval(() => {
                     opacity+=0.1;
                     gear.style.opacity = opacity;
@@ -33,7 +33,7 @@ document.getElementById("Basket").addEventListener("click", function movingfunct
                         clicked=false;
                         moved=false;
                         opacity=0;
-                        document.getElementById("Basket").style.marginRight = "0px";
+                        document.getElementById("Basket").style.marginLeft = "0px";
                         clearInterval(disappear);
                     }
                     console.log(opacity);
