@@ -14,19 +14,35 @@ body{
 }
 #OvenTimer{
     position:relative;
+    overflow:hidden;
 }
 #OvenTime{
     position:absolute;
     color:orange;
     font-size: 400%;
     top:57%;
-    left:33%;
+    left:30%;
+    font-family:'Courier New', Courier, monospace;
 }
 #Oven{
     width:80%;
     margin-top: 10%;
 }
-
+#Scrolling{
+    overflow: hidden;
+    text-align: center;
+    top:20.5%;
+    left:22%;
+    position:absolute;
+    width:45%;
+    height:20%;
+}
+   #Scrolling pre {
+    position: absolute;
+    left:100%;
+    font-size: 20px;
+    color:white;
+   }
 /* Start and pause Button */
 .StartPause{
     cursor: pointer;
@@ -56,12 +72,26 @@ body{
     border-radius: 8px;
 }
 
+/* Session time */
+.Session{
+    position: relative;
+}
 #Plate{
     margin-top:2%;
-    width:60%;
+    width: 60%;
 }
 
 /* settings and stuffs */
+#Session{
+    position: absolute;
+    font-family:'Courier New', Courier, monospace;
+    font-weight: Bold;
+    font-size: 400%;
+    color: #3D426B;
+    left: 30%;
+    bottom: 30%;
+}
+
 #Basket{
     margin-top:10%;
     margin-right: auto;
