@@ -19,7 +19,6 @@ setInterval(() => {
     boxcontainer=container.getBoundingClientRect()
     text.style.left=percent+"%";
     percent=percent-0.1;
-    console.log(boxtext)
     if(boxtext.right<=boxcontainer.left){
         percent=120;
     }

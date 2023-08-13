@@ -38,7 +38,9 @@ function Active(){
                     if (currentbreak==false){
                         percent=120;
                         cycle++
-                        todolist.removeChild(task[0])
+                        if(task.length>0){
+                            todolist.removeChild(task[0])
+                        }
                         currentbreak=true;
                         oven.style.color="aqua";
                         if(cycle==longbreak){
