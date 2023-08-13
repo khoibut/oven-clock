@@ -27,7 +27,6 @@ document.getElementById("Basket").addEventListener("click", () => {
                             opacity=1;
                             clearInterval(appear);
                         }
-                        console.log(opacity);
                     }, 50);
     
                 }else{

@@ -1,9 +1,9 @@
 <!DOCTYPE html>
-    <html lang="en">
-        <head>
-            <meta charset="UTF-8">
-            <meta name="viewport" content="width=device-width, initial-scale=1.0">
-            <title>Oven Clock</title>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>Oven Clock</title>
             <link href="OvenClock.css" rel="stylesheet"/>
             <script src="Adjustment.js" defer></script>
             <script src="Timer.js" defer></script>
@@ -12,6 +12,8 @@
             <script src="saveload.js" defer></script>
             <script src="movingfunction.js" defer></script>
             <script src="setting-window.js" defer></script>
+            <script src="Volume.js" defer></script>
+            <script src="TimeSetting.js" defer></script>
         </head>
         <body>
             <img id="Title" src="Images/Title.png">
@@ -24,7 +26,7 @@
                     </div>
                     <div id="OvenTime"></div>
 <!-- Start and Pause Buttons -->
-                    <button class="StartPause" onclick="sound.cloneNode(true).play(), Active(), Turnon()">START</button>
+                    <button class="StartPause" onclick="soundplay=sound.cloneNode(true),soundplay.volume=sound.volume,soundplay.play(), Active(), Turnon()">START</button>
                     <audio id="Click">
                         <source src="Audio/Button.mp3">
                     </audio>
@@ -48,7 +50,25 @@
                             </div>
                         </div>
                         <!-- <img class="adjustment" src="https://th.bing.com/th/id/OIP.f0hIG5w8e0Xl0tA1XjecsgHaD-?pid=ImgDet&rs=1"> -->
-                        <div id="window"></div>
+                        <div id="window">
+                            <div id="Volume">
+                                <span id="textVolume">Volume:</span> <input type="range" min="0" max="100" value="50" id="sliderVolume"><span id="valueVolume">50%</span>
+                            </div>
+                            <div id="settingTime">
+                                <span id="settingOven">Oven Time</span>
+                                <span id="settingSBreak">Short Break</span>
+                                <span id="settingLBreak">Long Break</span>
+                                <span id="WorkTime">
+                                    <input type="number" id="WorkTimeminute" min="0" max="99" value="25" placeholder="00">:<input type="number" id="WorkTimesecond" min="0" max="59" value="00" placeholder="00">
+                                </span>
+                                <span id="SBreakTime">
+                                    <input type="number" id="SBreakTimeminute" min="0" max="99" placeholder="00" value="05">:<input type="number" id="SBreakTimesecond" min="0" max="59" placeholder="00" value="00">
+                                </span>
+                                <span id="LBreakTime">
+                                    <input type="number" id="LBreakTimeminute" min="0" max="99" placeholder="00" value="15">:<input type="number" id="LBreakTimesecond" min="0" max="59" placeholder="00" value="00">
+                                </span>
+                            </div>
+                        </div>
                     </div>
 
               

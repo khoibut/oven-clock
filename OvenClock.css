@@ -178,16 +178,87 @@ body{
 #window{
     position: absolute;
     background-color:rgb(245, 242, 251);
-    text-align: center;
-    top:0%;
+    top:5%;
     left: 45%;
-    height: 27%;
-    width: 40%;
-    padding:10%;
+    height: 100%;
+    width: 50%;
     border: 5px solid rgb(48, 49, 53);
     border-radius: 20px;
     opacity: 1;
     display:none;
+}
+#Volume{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    position:absolute;
+    width:100%;
+    font-size: 150%;
+    top:10%;
+}
+#textVolume{
+    position:absolute;
+    left:5%;
+}
+#sliderVolume{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 40%;
+    height: 15px;
+    border-radius: 5px;  
+    background: #d3d3d3;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+#sliderVolume::-webkit-slider-thumb{
+    -webkit-appearance: none;
+    appearance: none;
+    width: 25px;
+    height: 25px;
+    border-radius: 50%; 
+    background: #ffd000;
+    cursor: pointer;
+}
+#valueVolume{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    right: 15%;
+    top:10%;
+    position:absolute;
+}
+#settingOven,#settingSBreak,#settingLBreak{
+    font-family:'Lucida Sans', 'Lucida Sans Regular', 'Lucida Grande', 'Lucida Sans Unicode', Geneva, Verdana, sans-serif;
+    font-size: 100%;
+    position:absolute;
+    top:40%;
+}
+#settingOven{
+    left:5%;
+}
+#settingSBreak{
+    left:35%;
+}
+#settingLBreak{
+    left:67%;
+}
+#WorkTime,#SBreakTime,#LBreakTime{
+    font-size: 150%;
+    position:absolute;
+    top:55%;
+}
+#WorkTime{
+    left:2%;
+}
+#SBreakTime{
+    left:32.5%;
+}
+#LBreakTime{
+    left:63.5%;
+}
+#WorkTimeminute,#WorkTimesecond,#LBreakTimeminute,#LBreakTimesecond,#SBreakTimeminute,#SBreakTimesecond{
+    width:15%;
+}
+#WorkTime input::-webkit-inner-spin-button,#SBreakTime input::-webkit-inner-spin-button, #LBreakTime input::-webkit-inner-spin-button{
+    -webkit-appearance: none;
 }
 /* .adjustment{
     opacity:1;

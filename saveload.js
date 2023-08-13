@@ -1,5 +1,32 @@
 saveicon=document.getElementById("save")
 loadicon=document.getElementById("load")
+if(localStorage.getItem("volume")!=null){
+    sliderVolume.value=localStorage.getItem("volume")
+}
+if(localStorage.getItem("workminute")!=null){
+    Workminute.value=localStorage.getItem("workminute")
+    Workminute.onchange()
+}
+if(localStorage.getItem("worksecond")!=null){
+    Worksecond.value=localStorage.getItem("worksecond")
+    Worksecond.onchange()
+}
+if(localStorage.getItem("sbminute")!=null){
+    SBreakminute.value=localStorage.getItem("sbminute")
+    SBreakminute.onchange()
+}
+if(localStorage.getItem("sbsecond")!=null){
+    SBreaksecond.value=localStorage.getItem("sbsecond")
+    SBreaksecond.onchange()
+}
+if(localStorage.getItem("lbminute")!=null){
+    LBreakminute.value=localStorage.getItem("lbminute")
+    LBreakminute.onchange()
+}
+if(localStorage.getItem("lbsecond")!=null){
+    LBreaksecond.value=localStorage.getItem("lbsecond")
+    LBreaksecond.onchange()
+}
 saving=false;
 loading=false;
 saveicon.addEventListener("click",()=>{
