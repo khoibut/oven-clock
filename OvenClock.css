@@ -80,8 +80,6 @@ body{
     margin-top:2%;
     width: 60%;
 }
-
-/* settings and stuffs */
 #Session{
     position: absolute;
     font-family:'Courier New', Courier, monospace;
@@ -92,6 +90,7 @@ body{
     bottom: 30%;
 }
 
+/* settings and stuffs */
 #Settings{
     position: relative;
 }
@@ -125,8 +124,24 @@ body{
     cursor: pointer;
     top: 27%;
 }
+@keyframes hovering {
+    from{
+        transform: translateY(-20px);
+    }
+    to{
+        transform: translateY(0px);
+    }
+}
+#gear:hover, #save:hover, #load:hover{
+    width: +15%;
+    animation-name: hovering;
+    animation-duration: 1s;
+    animation-timing-function: ease-in-out;
+    animation-direction: alternate-reverse;
+    animation-iteration-count: infinite;  
+}
 
-
+/* todolist */
 #Todolist{
     background-image: url("Images/RedPicnic.png");
     margin-top: 10%;

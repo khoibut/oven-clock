@@ -4,7 +4,7 @@ const save = document.getElementById("save");
 const load = document.getElementById("load");
 let opacity=0;
 let clicked=false;
-document.getElementById("Basket").addEventListener("click", function movingfunction(){
+document.getElementById("Basket").addEventListener("click", () => {
     {
         if(clicked==false){
             clicked=true;
@@ -43,18 +43,6 @@ document.getElementById("Basket").addEventListener("click", function movingfunct
     }
 });
 
-
-
-
-//  function appear(){
-//     gear.style.opacity = opacity;
-//     save.style.opacity = opacity;
-//     load.style.opacity = opacity;
-//     opacity++;
-//     if(opacity == 100){
-//         clearInterval(appear());
-//     } 
-// }
 
 
 
