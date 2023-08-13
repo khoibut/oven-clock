@@ -77,25 +77,22 @@ body{
     left: 580px;
     top: 1060px;
     width: 8%;
-    cursor: pointer;
-    /* opacity: 0; */
 }
 #save{
     position: absolute;
     left: 800px;
     top: 1060px;
     width: 7%;
-    cursor: pointer;
 }
 #load{
     position: absolute;
     left: 1000px;
     top: 1060px;
     width: 8%;
-    cursor: pointer;
 }
 #gear, #save, #load{
     opacity: 0;
+    cursor: pointer;
 }
 
 
