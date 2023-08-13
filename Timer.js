@@ -14,9 +14,9 @@ function currentTime(time){
 currentbreak=false;
 cycle=0
 longbreak=4;
-worktime=10
-shortbreaktime=5
-longbreaktime=7
+worktime=1500
+shortbreaktime=300
+longbreaktime=900
 time=worktime
 oven=document.getElementById("OvenTime");
 oven.innerHTML=currentTime(time);
