@@ -114,6 +114,24 @@ body{
     left: 54.5%;
     width: 10%;
 }
+#saved{
+    font-size: 160%;
+    color:orangered;
+    position:absolute;
+    top:50%;
+    left:43%;
+    display:none;
+    opacity: 0;
+}
+#loaded{
+    font-size: 160%;
+    color:orangered;
+    position:absolute;
+    top:50%;
+    left:67%;
+    display:none;
+    opacity: 0;
+}
 #load{
     position: absolute;
     left: 80%;

@@ -1,6 +1,28 @@
 saveicon=document.getElementById("save")
 loadicon=document.getElementById("load")
+saving=false;
+loading=false;
 saveicon.addEventListener("click",()=>{
+    if(!saving){
+        savetext=document.getElementById("saved")
+        savetext.style.display="inline"
+        savechange=0.1
+        saveopacity=0
+        savetext.style.opacity=0
+        saving=true
+        saveappear=setInterval(()=>{
+            saveopacity+=savechange
+            savetext.style.opacity=saveopacity
+            if(saveopacity>=1){
+                savechange=-0.1
+            }
+            if(saveopacity<0){
+                saving=false;
+                savetext.style.display="none"
+                clearInterval(saveappear)
+            }
+        },30)
+    }
     tasks=document.getElementsByClassName("draggable")
     localStorage.setItem("TaskLength",tasks.length)
     for(i=0;i<tasks.length;i++){
@@ -8,6 +30,26 @@ saveicon.addEventListener("click",()=>{
     }
 })
 loadicon.addEventListener("click",()=>{
+    if(!loading){
+        loadtext=document.getElementById("loaded")
+        loadtext.style.display="inline"
+        loadchange=0.1
+        loadopacity=0
+        loadtext.style.opacity=0
+        loading=true
+        loadappear=setInterval(()=>{
+            loadopacity+=loadchange
+            loadtext.style.opacity=loadopacity
+            if(loadopacity>=1){
+                loadchange=-0.1
+            }
+            if(loadopacity<0){
+                loading=false;
+                loadtext.style.display="none"
+                clearInterval(loadappear)
+            }
+        },30)
+    }
     tasks=[...document.querySelectorAll(".draggable")]
     list=document.getElementById("TaskList")
     tasks.forEach(element => {
