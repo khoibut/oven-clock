@@ -1,3 +1,7 @@
+let applesound = new Audio("Audio/pencil_check_mark_1-88805.mp3");
+let dragendSound= new Audio("Audio/shooting-sound-fx-159024.mp3");
+let trashsound = new Audio("Audio/pop-1-35897.mp3");
+
 function Add(Task){
     ul=document.getElementById("TaskList");
     li=document.createElement("li");
@@ -11,12 +15,23 @@ function Add(Task){
     li.appendChild(Trash);
     ul.appendChild(li);
     Trash.addEventListener("click",function(){
-        this.parentElement.remove();
+        if(clicked==false){
+            trashsound.play();
+            clicked=true;
+            extratimefortrash=setInterval(()=>{    
+                this.parentElement.remove();
+                trashsound.pause();
+                trashsound.currentTime = 0;
+                clicked=false;
+                clearInterval(extratimefortrash);
+            },100);
+        }
     })
     li.addEventListener('dragstart',function(){
         this.classList.add("dragging");
     })
     li.addEventListener("dragend",function(){
+        dragendSound.play();
         this.classList.remove("dragging");
     })
     ul.addEventListener("dragover",function(e){
@@ -44,6 +59,7 @@ function Add(Task){
 document.getElementById("Apple").addEventListener("click",()=>{
     Task=document.getElementById("Task").value;
     if (Task.length>0){
+        applesound.play();
         Add(Task)
     }
     document.getElementById("Task").value='';

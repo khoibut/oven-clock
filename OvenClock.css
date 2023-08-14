@@ -260,9 +260,6 @@ body{
 #WorkTime input::-webkit-inner-spin-button,#SBreakTime input::-webkit-inner-spin-button, #LBreakTime input::-webkit-inner-spin-button{
     -webkit-appearance: none;
 }
-/* .adjustment{
-    opacity:1;
-} */
 #save-and-load{
     opacity:1;
 }

@@ -2,6 +2,7 @@ let moved=false;
 const gear = document.getElementById("gear");
 const save = document.getElementById("save");
 const load = document.getElementById("load");
+let basketsound = new Audio("Audio/wood-crack-1-105890.mp3");
 
 let opacity=0;
 let clicked=false;
@@ -9,6 +10,7 @@ document.getElementById("Basket").addEventListener("click", () => {
     {
         if(windowOn==false){
 
+            basketsound.play();
             if(clicked==false){
                 clicked=true;
                 gear.style.display="inline";
@@ -25,7 +27,10 @@ document.getElementById("Basket").addEventListener("click", () => {
                             clicked=false;
                             moved=true;
                             opacity=1;
+                            basketsound.pause();
+                            basketsound.currentTime=1;
                             clearInterval(appear);
+                            basketsound.pause();
                         }
                     }, 50);
     
@@ -42,6 +47,8 @@ document.getElementById("Basket").addEventListener("click", () => {
                             clicked=false;
                             moved=false;
                             opacity=0;
+                            basketsound.pause();
+                            basketsound.currentTime=0;
                             document.getElementById("Basket").style.marginLeft = "0px";
                             clearInterval(disappear);
                         }
