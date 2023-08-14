@@ -1,6 +1,8 @@
 let windowOn=false;
 const settingwindow = document.getElementById('window');
 const saveAndLoad = document.getElementById('save-and-load');
+let gearsound = new Audio("Audio/revolver-chamber-spin-ratchet-sound-90521.mp3")
+
 const windowslidein=[
     {transform: "scaleY(0) "},
     {transform: "scaleY(1)"},
@@ -28,6 +30,7 @@ const windowtiming={
 
 document.getElementById('gear').addEventListener('click', ()=>{
     if(clicked==false){
+        gearsound.play();
         clicked=true;
         if(windowOn==false){
             gear.animate(gearspin,geartiming);
@@ -38,6 +41,8 @@ document.getElementById('gear').addEventListener('click', ()=>{
                 saveAndLoad.style.opacity = opacity;
                 opacity-=0.1;
                 if(opacity <= 0){
+                    gearsound.pause();
+                    gearsound.currentTime=0;
                     clicked=false;
                     saveAndLoad.style.opacity=0;
                     clearInterval(fadeOut);
@@ -51,6 +56,8 @@ document.getElementById('gear').addEventListener('click', ()=>{
                 saveAndLoad.style.opacity = opacity;
                 opacity+=0.1;
                 if(opacity >= 1){
+                    gearsound.pause();
+                    gearsound.currentTime=0;
                     clicked=false;
                     saveAndLoad.style.opacity=1;
                     clearInterval(fadeIn);

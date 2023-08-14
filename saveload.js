@@ -1,5 +1,9 @@
 saveicon=document.getElementById("save")
 loadicon=document.getElementById("load")
+
+let savesound= new Audio("Audio/correct-2-46134.mp3");
+let loadsound= new Audio("Audio/click-button-140881.mp3");
+
 if(localStorage.getItem("volume")!=null){
     sliderVolume.value=localStorage.getItem("volume")
 }
@@ -30,6 +34,7 @@ if(localStorage.getItem("lbsecond")!=null){
 saving=false;
 loading=false;
 saveicon.addEventListener("click",()=>{
+    savesound.play();
     if(!saving){
         savetext=document.getElementById("saved")
         savetext.style.display="inline"
@@ -57,6 +62,7 @@ saveicon.addEventListener("click",()=>{
     }
 })
 loadicon.addEventListener("click",()=>{
+    loadsound.play();
     if(!loading){
         loadtext=document.getElementById("loaded")
         loadtext.style.display="inline"
