@@ -15,22 +15,16 @@ function Add(Task){
     li.appendChild(Trash);
     ul.appendChild(li);
     Trash.addEventListener("click",function(){
-        if(clicked==false){
-            trashsound.play();
-            clicked=true;
-            extratimefortrash=setInterval(()=>{    
-                this.parentElement.remove();
-                trashsound.pause();
-                trashsound.currentTime = 0;
-                clicked=false;
-                clearInterval(extratimefortrash);
-            },100);
-        }
+        this.parentElement.remove();
+        trashsoundtemp=trashsound.cloneNode(true);
+        trashsoundtemp.volume=sound.volume;
+        trashsoundtemp.play();
     })
     li.addEventListener('dragstart',function(){
         this.classList.add("dragging");
     })
     li.addEventListener("dragend",function(){
+        dragendSound.volume=sound.volume;
         dragendSound.play();
         this.classList.remove("dragging");
     })
@@ -59,6 +53,7 @@ function Add(Task){
 document.getElementById("Apple").addEventListener("click",()=>{
     Task=document.getElementById("Task").value;
     if (Task.length>0){
+        applesound.volume=sound.volume;
         applesound.play();
         Add(Task)
     }

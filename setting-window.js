@@ -30,6 +30,7 @@ const windowtiming={
 
 document.getElementById('gear').addEventListener('click', ()=>{
     if(clicked==false){
+        gearsound.volume=sound.volume;
         gearsound.play();
         clicked=true;
         if(windowOn==false){

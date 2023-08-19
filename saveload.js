@@ -34,6 +34,7 @@ if(localStorage.getItem("lbsecond")!=null){
 saving=false;
 loading=false;
 saveicon.addEventListener("click",()=>{
+    savesound.volume=sound.volume;
     savesound.play();
     if(!saving){
         savetext=document.getElementById("saved")
@@ -62,6 +63,7 @@ saveicon.addEventListener("click",()=>{
     }
 })
 loadicon.addEventListener("click",()=>{
+    loadsound.volume=sound.volume;
     loadsound.play();
     if(!loading){
         loadtext=document.getElementById("loaded")

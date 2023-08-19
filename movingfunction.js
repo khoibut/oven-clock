@@ -10,6 +10,7 @@ document.getElementById("Basket").addEventListener("click", () => {
     {
         if(windowOn==false){
 
+            basketsound.volume=sound.volume;
             basketsound.play();
             if(clicked==false){
                 clicked=true;
