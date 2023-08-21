@@ -108,7 +108,7 @@ var sound = document.getElementById('Click');
 function Active(){
     active.classList.toggle('active');
     if (active.classList.contains('active')){
-        active.innerHTML = "PAUSE";
+        document.getElementById("buttontext").innerHTML = "PAUSE";
         if(time>0){
             Oventime=setInterval(() => {
                 todolist=document.getElementById("TaskList")
@@ -144,7 +144,7 @@ function Active(){
                     ding.play();
                     active.classList.remove('active');
                     oven.innerHTML=currentTime(time);
-                    active.innerHTML = "START";
+                    document.getElementById("buttontext").innerHTML = "START";
                     clearInterval(Oventime)
                 }
             }, 1000);
@@ -152,6 +152,6 @@ function Active(){
     }
     else{
         clearInterval(Oventime);
-        active.innerHTML = "START";
+        document.getElementById("buttontext").innerHTML = "START";
     }
 }

@@ -327,3 +327,7 @@ li{
 .Trash:hover{
     transform: scale(1.5);
 }
+#buttontext{
+    writing-mode: vertical-lr;
+    text-orientation: upright;
+}
